@@ -3,6 +3,7 @@
   "displayName": "Typst",
   "description": "Typst language support",
   "repository": "https://github.com/clysto/typst-vscode",
+  "publisher": "clysto",
   "icon": "icons/icon.png",
   "license": "MIT",
   "version": "1.0.0",
