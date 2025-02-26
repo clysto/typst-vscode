@@ -1,0 +1,42 @@
+{
+  "name": "typst",
+  "displayName": "Typst",
+  "description": "Typst language support",
+  "repository": "https://github.com/clysto/typst-vscode",
+  "icon": "icons/icon.png",
+  "license": "MIT",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "typst",
+        "aliases": [
+          "Typst",
+          "typst"
+        ],
+        "extensions": [
+          "typ"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/typst.svg",
+          "dark": "./icons/typst.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "typst",
+        "scopeName": "source.typst",
+        "path": "./syntaxes/typst.tmLanguage.json"
+      }
+    ]
+  }
+}
