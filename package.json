@@ -25,19 +25,25 @@
         "extensions": [
           "typ"
         ],
-        "configuration": "./language-configuration.json",
+        "configuration": "./syntaxes/language-configuration.json",
         "icon": {
           "light": "./icons/typst.svg",
           "dark": "./icons/typst.svg"
         }
       }
     ],
-    "grammars": [
-      {
-        "language": "typst",
-        "scopeName": "source.typst",
-        "path": "./syntaxes/typst.tmLanguage.json"
+    "configuration": {
+      "title": "Typst",
+      "properties": {
+        "typst.tinymistPath": {
+          "type": "string",
+          "markdownDescription": "Path to the `tinymist` executable.",
+          "default": "tinymist"
+        }
       }
-    ]
+    }
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
   }
 }
