@@ -57,6 +57,18 @@
           "comment.block.typst",
           "comment.line.double-slash.typst"
         ]
+      },
+      {
+        "language": "typst-markdown-injection",
+        "scopeName": "markdown.typst.codeblock",
+        "path": "./syntaxes/typst-markdown-injection.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.typst": "typst",
+          "meta.embedded.block.typst-code": "typst-code"
+        }
       }
     ],
     "languages": [
@@ -82,13 +94,16 @@
           ".typc"
         ],
         "aliases": [
-          "Typst (Code Mode)",
+          "Typst Code Mode",
           "typc"
         ],
         "icon": {
           "light": "./icons/typst.svg",
           "dark": "./icons/typst.svg"
         }
+      },
+      {
+        "id": "typst-markdown-injection"
       }
     ],
     "configuration": {
