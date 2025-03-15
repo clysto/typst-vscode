@@ -86,8 +86,8 @@
           "typc"
         ],
         "icon": {
-          "light": "./icons/typst.png",
-          "dark": "./icons/typst.png"
+          "light": "./icons/typst.svg",
+          "dark": "./icons/typst.svg"
         }
       }
     ],
