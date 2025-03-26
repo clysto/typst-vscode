@@ -1,6 +1,6 @@
 {
   "name": "typst",
-  "displayName": "Typst VS Code",
+  "displayName": "Typst Basic",
   "description": "Typst language support",
   "repository": "https://github.com/clysto/typst-vscode",
   "publisher": "clysto",
