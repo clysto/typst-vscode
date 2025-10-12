@@ -6,7 +6,7 @@
   "publisher": "clysto",
   "icon": "icons/icon.png",
   "license": "MIT",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "engines": {
     "vscode": "^1.97.0"
   },

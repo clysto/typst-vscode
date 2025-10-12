@@ -33,9 +33,7 @@ async function startClient(context) {
       { scheme: 'untitled', language: 'typst' },
     ],
     initializationOptions: {
-      tinymist: {
-        formatterMode: 'typstyle',
-      },
+      formatterMode: 'typstyle',
     },
     middleware: {
       provideCodeLenses: () => null,
