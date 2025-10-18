@@ -47,7 +47,7 @@ async function startClient(context) {
     clientOptions
   );
 
-  await client.start();
+  client.start();
 }
 
 async function deactivate() {
