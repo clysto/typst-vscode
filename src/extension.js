@@ -36,6 +36,19 @@ async function startClient(context) {
       formatterMode: 'typstyle',
     },
     middleware: {
+      workspace: {
+        configuration: (params, token, next) => {
+          return params.items.map((item) => {
+            const section = item?.section;
+
+            if (section === 'formatterMode') {
+              return 'typstyle';
+            }
+
+            return null;
+          });
+        },
+      },
       provideCodeLenses: () => null,
     },
   };
