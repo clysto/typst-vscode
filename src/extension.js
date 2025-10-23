@@ -16,6 +16,8 @@ async function activate(context) {
 async function startClient(context) {
   const config = vscode.workspace.getConfiguration('typst');
   const executablePath = config.get('tinymistPath');
+  const fontPaths = config.get('fontPaths');
+  const formatterMode = config.get('formatterMode');
 
   const run = {
     command: executablePath,
@@ -33,16 +35,31 @@ async function startClient(context) {
       { scheme: 'untitled', language: 'typst' },
     ],
     initializationOptions: {
-      formatterMode: 'typstyle',
+      formatterMode,
+      fontPaths: [...fontPaths],
     },
     middleware: {
       workspace: {
         configuration: (params, token, next) => {
-          return params.items.map((item) => {
-            const section = item?.section;
+          return params.items.map((item, i) => {
+            const raw = item?.section ?? '';
+            const scope = item?.scopeUri
+              ? vscode.Uri.parse(item.scopeUri)
+              : undefined;
 
-            if (section === 'formatterMode') {
-              return 'typstyle';
+            const isPrefixed = raw.startsWith('typst.');
+            const key = isPrefixed ? raw.slice('typst.'.length) : raw;
+
+            const cfg = vscode.workspace.getConfiguration('typst', scope);
+
+            if (key === 'formatterMode') {
+              return cfg.get('formatterMode', 'typstyle');
+            }
+
+            if (key === 'fontPaths') {
+              const v = cfg.get('fontPaths');
+              if (v === 'disable') return null;
+              return Array.isArray(v) ? [...v] : v ?? null;
             }
 
             return null;

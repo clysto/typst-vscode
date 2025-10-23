@@ -6,7 +6,7 @@
   "publisher": "clysto",
   "icon": "icons/icon.png",
   "license": "MIT",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "engines": {
     "vscode": "^1.97.0"
   },
@@ -113,6 +113,24 @@
           "type": "string",
           "markdownDescription": "Path to the `tinymist` executable.",
           "default": "tinymist"
+        },
+        "typst.fontPaths": {
+          "markdownDescription": "Additional font paths for Typst to search for fonts.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "default": null
+        },
+        "typst.formatterMode": {
+          "markdownDescription": "Select the tool to format Typst code.",
+          "type": "string",
+          "default": "typstyle",
+          "enum": [
+            "disable",
+            "typstyle",
+            "typstfmt"
+          ]
         }
       }
     }
