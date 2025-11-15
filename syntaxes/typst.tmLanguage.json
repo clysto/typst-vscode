@@ -52,6 +52,8 @@
         { "include": "#markupLink" },
         { "include": "#markupMath" },
         { "include": "#markupHeading" },
+        { "include": "#markupBold" },
+        { "include": "#markupItalic" },
         {
           "name": "punctuation.definition.list.unnumbered.typst",
           "match": "^\\s*-\\s+"
