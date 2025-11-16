@@ -2,7 +2,7 @@
 
 A lightweight VS Code extension for Typst.
 
-> I prefer simplicity and don’t require PDF preview or UI enhancements. This extension solely leverages Tinymist’s LSP functionality. If you need additional features, consider using Tinymist’s official VS Code extension.
+> This is an extremely minimal Typst extension. It only connects VS Code to your own Tinymist executable and omits many client‑side features. If you are not sure what you’re doing or want a full Typst experience (preview, UI tools, richer integrations), please use the official Tinymist VS Code extension.
 
 ## Usage
 
